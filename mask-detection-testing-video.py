@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[1]:
-
-
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
@@ -11,23 +7,10 @@ import numpy as np
 import cv2
 import os
 
-
-# In[ ]:
-
-
 model = load_model("\mask-detection.model")
-prototxtPath = "deploy.prototxt"
-weightsPath = "res10_300x300_ssd_iter_140000.caffemodel"
-
-
-# In[3]:
-
-
+prototxtPath = "\deploy.prototxt"
+weightsPath = "\res10_300x300_ssd_iter_140000.caffemodel"
 net=cv2.dnn.readNet(prototxtPath , weightsPath)
-
-
-# In[4]:
-
 
 def readImage(imagePath):
   #image = cv2.imread(imagePath)
@@ -80,10 +63,6 @@ def readImage(imagePath):
   cv2.waitKey(0)
   cv2.destroyAllWindows()
 
-
-# In[5]:
-
-
 cap = cv2.VideoCapture(0)
 while(cap.isOpened()):
     ret, frame = cap.read()
@@ -97,6 +76,6 @@ while(cap.isOpened()):
     else:
         break
 cap.release()
-out.release()
+cap.release()
 cv2.destroyAllWindows()
 
