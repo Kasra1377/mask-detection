@@ -1,0 +1,9 @@
+tensorflow==2.4.1
+sklearn==0.22.2.post1
+seaborn==0.11.1
+pandas==1.1.5
+numpy==1.19.5
+cv2==4.1.2
+PIL==7.1.2
+matplotlib==3.2.2
+imutils==0.5.4
