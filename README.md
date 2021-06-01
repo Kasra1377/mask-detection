@@ -8,16 +8,25 @@
 
 ### 📄Description
 ---
-In this prject our purpose is building a model that detect the mask on a face. This project will be useful for 
+* In this project our purpose is building a model that detect mask on face(s).
+* The model of this project is a pre-trained model that is fine tuned from `mobileNetV2` model.  
 
 ### 📐Models
 ---
-`mask-detector.model`: a mobileNetV2 pre-trained model that detect whether the face is with mask or without mask.
+`mask-detector.model`: A pre-trained model that is based on `mobileNetV2 ` model that detect whether the face is with mask or without mask.
 
-`deploy.prototxt` & `res10_300x300_ssd_iter_140000.caffemodel`: Two essential CV2 DNN models to detect faces in the images. 
+`deploy.prototxt` & `res10_300x300_ssd_iter_140000.caffemodel`: Two essential CV2 DNN models to detect faces in images. 
 
-**Note** : You can download these models from this repository.
+**Note** : These models are available in this repository.
 
+### 🎫 Dataset
+---
+* You can access the dataset via `mask_dataset` folder in this repository.
+* The folder contains two subfolders, `with_mask` and `without_mask`.
+* `without_mask` folder contains cropped faces.These faces does not have mask.
+* `with_mask` folder contains persons that have a mask on their faces
+* For avoiding any kind of biases we did not put the same person in these two folders.
+* The dataset contains two classes, and each of them has `~1000` sample.So in this project we will not face `imbalanced dataset`.
 
 ### 💻🖥Installation
 ---
