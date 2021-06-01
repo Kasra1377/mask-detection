@@ -8,25 +8,37 @@
 
 ### 📄Description
 ---
-* In this project our purpose is building a model that detect mask on face(s).
-* The model of this project is a pre-trained model that is fine tuned from `mobileNetV2` model.  
+* In this project our purpose is building a model that detects mask on face(s).
+* The model of this project is a pre-trained model that is fine tuned from `mobileNetV2` model.
+* If you are interested in further reports, you can access them in `mask-detection-training.ipynb` file in this repository
 
 ### 📐Models
 ---
-`mask-detector.model`: A pre-trained model that is based on `mobileNetV2 ` model that detect whether the face is with mask or without mask.
+`mask-detector.model`: A pre-trained model that is fine tuned from `mobileNetV2 ` model. This model detects that whether the face is with mask or without mask.
 
-`deploy.prototxt` & `res10_300x300_ssd_iter_140000.caffemodel`: Two essential CV2 DNN models to detect faces in images. 
+`deploy.prototxt` & `res10_300x300_ssd_iter_140000.caffemodel`: Two essential CV2 DNN models to detect faces in images. So you have to download them to implement these project.
 
 **Note** : These models are available in this repository.
+
+### 📈📉📊Model Performance
+---
+* This model has reached `99%` accuracy in `validation set` and `training set` in 20 epochs which is acceptable.
+* This model classified all the samples correctly, except `~5` of them.
+* You can see the `classification report` and `confusion matrix` for further details down below.
+
+![alt text](demo/model-performance/classification-report.PNG)
+![alt text](demo/model-performance/confusion-matrix.PNG)
+
+
 
 ### 🎫 Dataset
 ---
 * You can access the dataset via `mask_dataset` folder in this repository.
 * The folder contains two subfolders, `with_mask` and `without_mask`.
-* `without_mask` folder contains cropped faces.These faces does not have mask.
-* `with_mask` folder contains persons that have a mask on their faces
-* For avoiding any kind of biases we did not put the same person in these two folders.
-* The dataset contains two classes, and each of them has `~1000` sample.So in this project we will not face `imbalanced dataset`.
+* `without_mask` folder contains cropped faces. These faces do not have mask.
+* `with_mask` folder contains persons that has a mask on their faces.
+* For avoiding any kind of biases we did not put the same face in these two subfolders.
+* The dataset contains two classes, and each of them has `~1000` samples. So in this project we will not face an `imbalanced dataset`.
 
 ### 💻🖥Installation
 ---
