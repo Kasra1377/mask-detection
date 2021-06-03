@@ -10,7 +10,7 @@
 ---
 * In this project our purpose is building a model that detects mask on face(s).
 * The model of this project is a pre-trained model that is fine tuned from `mobileNetV2` model.
-* If you are interested in further reports, you can access them in `mask-detection-training.ipynb` file in this repository
+* If you are interested in further details, you can access them in `mask-detection-training.ipynb` file in this repository
 
 ### 📐Models
 ---
