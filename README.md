@@ -50,7 +50,7 @@
 | seaborn                 | 0.11.1            |
 | pandas                  | 1.1.5             |
 | numpy                   | 1.19.5            |
-| cv2                     | 4.1.2            |
+| cv2                     | 4.1.2             |
 | PIL                     | 7.1.2             |
 | matplotlib              | 3.2.2             |
 | imutils                 | 0.5.4             |
@@ -93,3 +93,5 @@ Imutils:
 ```
 $ pip install imutils==0.5.4
 ```
+### 👥Contributers
+Kasra1377
